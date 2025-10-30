@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&display=swap");
+@font-face {
+  font-family: "NerdFont";
+  src: url(../assets/fonts/jetbrains-nerd-font.ttf);
+}
+
+* {
+  font-family: "Geist", sans-serif;
+}
+
+:root {
+  /* === Backgrounds === */
+  --bg-0: #0b0c0e;
+  --bg-1: #131416;
+  --bg-2: #1b1c1f;
+
+  /* === Foregrounds === */
+  --fg-0: #e8e8ef;
+  --fg-1: #b8b8c4;
+  --fg-2: #8f8f9b;
+
+  /* === Accents === */
+  --accent-blue: #34d8ff;
+  --accent-cyan: #67f1d2;
+  --accent-mint: #9afad2;
+  --accent-purple: #bea5ff;
+  --accent-pink: #ffb2e4;
+  --accent-lime: #d3fa83;
+  --accent-orange: #ffcc91;
+  --accent-red: #ff7b8f;
+  --accent-magenta: #ff7cf3;
+
+  --border-color: rgba(255, 255, 255, 0.07);
+  --shadow-color: rgba(0, 0, 0, 0.45);
+  --radius: 12px;
+  --transition: 0.2s ease-in-out;
+}
+
+body {
+  background-color: var(--bg-0);
+  color: var(--fg-0);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  inset: 0;
+  background-image: radial-gradient(circle, #b6b6c265 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.nerd {
+  font-family: "NerdFont";
+}
+
+main {
+  flex-grow: 1;
+}

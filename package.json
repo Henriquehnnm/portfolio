@@ -9,6 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.15.2"
+    "@lucide/astro": "^0.548.0",
+    "astro": "^5.15.2",
+    "typewriter-effect": "^2.22.0"
+  },
+  "devDependencies": {
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

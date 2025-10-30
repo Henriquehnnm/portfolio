@@ -1,0 +1,178 @@
+---
+
+---
+
+<header>
+  <nav>
+    <a href="/" id="home" class="nerd">Henrique</a>
+    <a href="/projects" class="nerd"> Projects</a>
+    <a href="/#about" class="nerd"> About</a>
+    <a href="/#tools" class="nerd"> Tools</a>
+    <a href="/#contact" class="nerd"> Contact</a>
+
+    <svg
+      id="burger"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-text-align-justify-icon lucide-text-align-justify"
+      ><path d="M3 5h18"></path><path d="M3 12h18"></path><path d="M3 19h18"
+      ></path></svg
+    >
+  </nav>
+  <div id="hover">
+    <ul>
+      <li><a href="/projects" class="nerd">Projects</a></li>
+
+      <li><a href="/#about" class="nerd">About</a></li>
+      <li><a href="/#tools" class="nerd">Tools</a></li>
+      <li><a href="/#contact" class="nerd">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  header {
+    top: 0;
+    position: sticky;
+    z-index: 99;
+    background-color: #0b0c0e11;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav > a {
+    color: var(--fg-1);
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #0b0c0eaa;
+    margin: 1px;
+    padding: 1px;
+    border-radius: 10px;
+    display: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  nav > a:hover {
+    color: var(--accent-lime);
+  }
+
+  svg {
+    color: var(--fg-1);
+    background-color: #0e0e10aa;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+  }
+
+  a#home {
+    margin-right: auto;
+    display: inline;
+  }
+
+  div#hover {
+    background-color: var(--bg-0);
+    margin: 10px;
+    padding: 20px;
+    padding-right: 30px;
+    border: 1px solid var(--border-color);
+    width: 100px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    display: none;
+  }
+
+  div#hover > ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  div#hover > ul > li > a {
+    line-height: 2;
+    color: var(--fg-1);
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #0b0c0eaa;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  @media (min-width: 800px) {
+    nav > a {
+      margin: 20px;
+    }
+
+    svg#burger {
+      display: none;
+      margin: 20px;
+    }
+
+    nav > a {
+      display: inline;
+    }
+  }
+
+  @media (max-width: 800px) {
+    #home {
+      margin: 20px;
+    }
+  }
+</style>
+
+<script>
+  // 1. Pega os elementos
+  const burger = document.querySelector("#burger");
+  const menuHover = document.querySelector("#hover");
+
+  // 2. Adiciona o evento de click no burger
+  burger.addEventListener("click", () => {
+    // 3. Toggle - se tá none vira block, se tá block vira none
+    if (menuHover.style.display === "block") {
+      menuHover.style.display = "none";
+    } else {
+      menuHover.style.display = "block";
+    }
+  });
+
+  // 4. Fechar quando clicar fora
+  document.addEventListener("click", (e) => {
+    // Se clicou fora do burger E fora do menu
+    if (!burger.contains(e.target) && !menuHover.contains(e.target)) {
+      menuHover.style.display = "none";
+    }
+  });
+
+  // 5. NOVO - Fechar ao rolar a página
+  window.addEventListener("scroll", () => {
+    menuHover.style.display = "none";
+  });
+
+  // 6. NOVO - Fechar ao clicar em qualquer link dentro do menu
+  const linksDoMenu = menuHover.querySelectorAll("a");
+  linksDoMenu.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuHover.style.display = "none";
+    });
+  });
+
+  // 7. NOVO - Fechar ao redimensionar a viewport
+  window.addEventListener("resize", () => {
+    menuHover.style.display = "none";
+  });
+</script>
