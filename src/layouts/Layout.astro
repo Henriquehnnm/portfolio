@@ -1,5 +1,4 @@
 ---
-import portfolioImage from "../assets/images/portfolio.png";
 export interface Props {
   title: string;
   description?: string;
@@ -22,21 +21,32 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>Henriquehnnm - {title}</title>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content={`Henriquehnnm - ${title}`} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url)} />
-    <meta property="og:url" content={Astro.url} />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://henriquehnnm.netlify.app/" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Henriquehnnm's Portfolio" />
+    <meta property="og:title" content="Henriquehnnm - Home" />
+    <meta
+      property="og:description"
+      content="A passionate front-end developer focused on creating elegant and efficient solutions."
+    />
+    <meta
+      property="og:image"
+      content="https://opengraph.b-cdn.net/production/images/afb4ba12-7629-46ee-9442-4e20a69595d3.png?token=wMutSDyEAvc_FD5H3OBxPI8nrFQz3HOkvWxiZw7xNXI&height=630&width=1200&expires=33297919393"
+    />
 
-    <!-- Twitter Card -->
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`Henriquehnnm - ${title}`} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(image, Astro.url)} />
-    <meta name="twitter:site" content="@Henriquehnnm" />
-    <meta name="twitter:creator" content="@Henriquehnnm" />
+    <meta property="twitter:domain" content="henriquehnnm.netlify.app" />
+    <meta property="twitter:url" content="https://henriquehnnm.netlify.app/" />
+    <meta name="twitter:title" content="Henriquehnnm - Home" />
+    <meta
+      name="twitter:description"
+      content="A passionate front-end developer focused on creating elegant and efficient solutions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/images/afb4ba12-7629-46ee-9442-4e20a69595d3.png?token=wMutSDyEAvc_FD5H3OBxPI8nrFQz3HOkvWxiZw7xNXI&height=630&width=1200&expires=33297919393"
+    />
   </head>
   <body>
     <slot />
