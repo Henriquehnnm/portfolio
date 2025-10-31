@@ -13,6 +13,7 @@
   --bg-0: #0b0c0e;
   --bg-1: #131416;
   --bg-2: #1b1c1f;
+  --bg-glass: #0b0c0e11;
 
   /* === Foregrounds === */
   --fg-0: #e8e8ef;
@@ -32,8 +33,37 @@
 
   --border-color: rgba(255, 255, 255, 0.07);
   --shadow-color: rgba(0, 0, 0, 0.45);
-  --radius: 12px;
-  --transition: 0.2s ease-in-out;
+  --dots: #b6b6c265;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* === Backgrounds === */
+    --bg-0: #ffffff;
+    --bg-1: #f5f5f5;
+    --bg-2: #e8e8e8;
+    --bg-glass: #ffffff11;
+
+    /* === Foregrounds === */
+    --fg-0: #1a1a1e;
+    --fg-1: #333338;
+    --fg-2: #4d4d55;
+
+    /* === Accents === */
+    --accent-blue: #0086b3;
+    --accent-cyan: #009578;
+    --accent-mint: #00a56f;
+    --accent-purple: #6e50c7;
+    --accent-pink: #bf267f;
+    --accent-lime: #6aa10e;
+    --accent-orange: #b95e05;
+    --accent-red: #b91c1c;
+    --accent-magenta: #9b0fb2;
+
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --dots: #33333865;
+  }
 }
 
 body {
@@ -50,7 +80,7 @@ body::before {
   height: 100vh;
   pointer-events: none;
   inset: 0;
-  background-image: radial-gradient(circle, #b6b6c265 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--dots) 1px, transparent 1px);
   background-size: 30px 30px;
   opacity: 0.5;
   z-index: -1;
