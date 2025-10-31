@@ -16,14 +16,16 @@ const {
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon_light.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" media="(prefers-color-scheme: dark)" />
+
     <meta name="generator" content={Astro.generator} />
     <title>Henriquehnnm - {title}</title>
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://henriquehnnm.netlify.app/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Henriquehnnm - Home" />
+    <meta property="og:title" content={`Henriquehnnm - ${title}`} />
     <meta
       property="og:description"
       content="A passionate front-end developer focused on creating elegant and efficient solutions."
@@ -37,7 +39,7 @@ const {
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="henriquehnnm.netlify.app" />
     <meta property="twitter:url" content="https://henriquehnnm.netlify.app/" />
-    <meta name="twitter:title" content="Henriquehnnm - Home" />
+    <meta name="twitter:title" content={`Henriquehnnm - ${title}`} />
     <meta
       name="twitter:description"
       content="A passionate front-end developer focused on creating elegant and efficient solutions."
