@@ -97,7 +97,6 @@ import dotfiles from "../../assets/images/dotfiles.png";
   .pro:hover {
     background-color: var(--bg-2);
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 
   .title {
@@ -150,5 +149,16 @@ import dotfiles from "../../assets/images/dotfiles.png";
 
   .button:hover {
     filter: brightness(0.9);
+  }
+
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 30px;
+    }
+
+    .pro:hover {
+      background-color: var(--bg-1);
+      transform: translateY(0px);
+    }
   }
 </style>
