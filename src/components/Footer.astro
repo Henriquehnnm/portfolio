@@ -2,28 +2,95 @@
 
 ---
 
-<footer>
-  <p class="nerd">
-    Made by <a href="https://github.com/Henriquehnnm" target="_blank"
-      >@Henriquehnnm</a
-    >
-  </p>
+<footer class="flex flex-col bg-neutral-900/50 animate-fade-in">
+  <div class="flex-col xl:flex-row gap-4 flex justify-between p-12">
+    <!--Infos e navegacão -->
+    <div class="flex flex-col gap-3">
+      <h4 class="text-xl font-extrabold">./Henriquehnnm</h4>
+      <h5 class="max-w-150 font-light text-neutral-400">
+        Desenvolvedor criativo especializado em experiências web modernas.
+        Construindo o futuro da web, um projeto de cada vez.
+      </h5>
+    </div>
+
+    <div class="flex flex-col xl:flex-row gap-4 xl:gap-12">
+      <div>
+        <h4 class="text-md font-bold">Links Rápidos</h4>
+        <ul>
+          <li>
+            <a
+              href="#inicio"
+              class="font-light text-neutral-400 hover:text-neutral-100 transition-colors"
+              >Início</a
+            >
+          </li>
+          <li>
+            <a
+              href="#sobre"
+              class="font-light text-neutral-400 hover:text-neutral-100 transition-colors"
+              >Sobre</a
+            >
+          </li>
+          <li>
+            <a
+              href="#portfolio"
+              class="font-light text-neutral-400 hover:text-neutral-100 transition-colors"
+              >Portfólio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="font-light text-neutral-400 hover:text-neutral-100 transition-colors"
+              >Contato</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-md font-bold">Serviços</h4>
+        <ul>
+          <li>
+            <a
+              href="#"
+              class="font-light text-neutral-400 hover:text-neutral-100 transition-colors"
+              >Desenvolvimento Web</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="font-light text-neutral-400 hover:text-neutral-100 transition-colors"
+              >UI/UX Design</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="font-light text-neutral-400 hover:text-neutral-100 transition-colors"
+              >Performance</a
+            >
+          </li>
+          <li>
+            <a
+              href=""
+              class="font-light text-neutral-400 hover:text-neutral-100 transition-colors"
+              >Consultoria</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-neutral-800/50 text-center p-3">
+    <!--Made by -->
+    <p>
+      Feito com 🧑‍🚀 por <a
+        href="https://github.com/Henriquehnnm"
+        class="font-extrabold hover:text-violet-300 transition-colors"
+        target="_blank">Henriquehnnm</a
+      >
+    </p>
+  </div>
 </footer>
-
-<style>
-  footer {
-    background-color: transparent;
-    text-align: center;
-    padding: 1px;
-  }
-
-  a {
-    color: var(--accent-lime);
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-</style>

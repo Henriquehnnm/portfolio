@@ -1,0 +1,113 @@
+---
+import { ArrowUpRight } from "@lucide/astro";
+---
+
+<section
+  id="portfolio"
+  class="p-5 lg:p-24 flex flex-col gap-3 mb-14 drop-shadow-[0_0_100px_#615FFF] animate-slide-in-from-bottom"
+>
+  <span class="uppercase text-neutral-400">Portfólio</span>
+  <h3 class="text-5xl/20 lg:text-7xl/30 font-extrabold">
+    Projetos <strong
+      class="bg-linear-to-r from-indigo-500 via-violet-500 to-purple-500 bg-clip-text text-transparent"
+      >Selecionados</strong
+    >
+  </h3>
+  <h4 class="text-neutral-400">
+    Veja como aplico esses conceitos na prática em blogs, portfólios e <br
+      class="hidden xl:block"
+    />
+    plataformas.
+  </h4>
+
+  <div class="flex flex-col lg:flex-row gap-8 pt-5">
+    <!--Dashboard -->
+    <div
+      class="bg-white/5 py-8 px-6 backdrop-blur-3xl rounded-xl shadow-lg flex flex-col gap-4 flex-1"
+    >
+      <h5 class="text-3xl font-extrabold">Astro Dashboard</h5>
+      <h6 class="text-neutral-400">
+        Um dashboard moderno, usando React, para uma UI responsiva e
+        impressionante.
+      </h6>
+      <div class="flex gap-3 mt-auto">
+        <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+          Astro
+        </div>
+        <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+          Tailwind CSS
+        </div>
+        <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+          React
+        </div>
+      </div>
+      <div>
+        <a href="#" class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+          Ver projeto <ArrowUpRight class="inline text-neutral-400" />
+        </a>
+      </div>
+    </div>
+
+    <!--Secundários -->
+    <div class="flex flex-col gap-8 flex-1">
+      <!--Bubble Tea Site -->
+      <div
+        class="bg-white/5 py-8 px-6 backdrop-blur-3xl rounded-xl shadow-lg flex flex-col gap-4"
+      >
+        <h5 class="text-3xl font-extrabold">Bubble Tea Shop</h5>
+        <h6 class="text-neutral-400">
+          Um site moderno, escrito com Astro, com o objetivo de ser bonito e
+          impactante
+        </h6>
+        <div class="flex gap-3 mt-auto">
+          <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+            Astro
+          </div>
+          <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+            Tailwind CSS
+          </div>
+          <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+            TypeScript
+          </div>
+        </div>
+        <div>
+          <a
+            href="#"
+            class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl"
+          >
+            Ver projeto <ArrowUpRight class="inline text-neutral-400" />
+          </a>
+        </div>
+      </div>
+
+      <!--Teclados Premium -->
+      <div
+        class="bg-white/5 py-8 px-6 backdrop-blur-3xl rounded-xl shadow-lg flex flex-col gap-4"
+      >
+        <h5 class="text-3xl font-extrabold">Type.</h5>
+        <h6 class="text-neutral-400">
+          Um site para uma loja fictícia, de teclados mecânicos modernos.
+        </h6>
+        <div class="flex gap-3 mt-auto">
+          <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+            Astro
+          </div>
+          <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+            Tailwind CSS
+          </div>
+          <div class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl">
+            TypeScript
+          </div>
+        </div>
+        <div>
+          <a
+            href="#"
+            class="bg-white/20 py-2 px-4 backdrop-blur-3xl rounded-xl"
+          >
+            Ver projeto <ArrowUpRight class="inline text-neutral-400" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

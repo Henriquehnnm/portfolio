@@ -1,0 +1,54 @@
+---
+const cards = [
+  {
+    title: "Arquitetura baseada em Astro",
+    description:
+      "Foco em entrega de HTML estático e hidratação seletiva para performance real.",
+  },
+  {
+    title: "Estilização com Tailwind",
+    description: "Interfaces responsivas e leves, sem excesso de arquivos CSS.",
+  },
+  {
+    title: "Segurança com TypeScript",
+    description:
+      "Desenvolvimento com tipagem estrita para evitar erros comuns em produção.",
+  },
+  {
+    title: "Workflow Eficiente",
+    description:
+      "Processo de desenvolvimento ágil, focado em clareza e organização de código.",
+  },
+];
+---
+
+<section id="sobre" class="p-5 lg:p-24 flex flex-col gap-5">
+  <span class="uppercase text-neutral-400">➜ Diferenciais</span>
+  <h3 class="text-4xl/10 md:text-5xl/20 font-extrabold">
+    Cards informativos, <br /> sem exagero
+  </h3>
+  <h4 class="text-neutral-400">
+    Abordagem focada em performance e código limpo, sem firulas <br
+      class="hidden xl:block"
+    /> desnecessárias.
+  </h4>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-5">
+    {
+      cards.map((card, index) => (
+        <div
+          class="flex gap-5 animate-fade-in"
+          style={`animation-delay: ${index * 100}ms`}
+        >
+          <span class="w-1 h-full bg-linear-to-b/shorter from-indigo-500 via-violet-500 to-purple-500 block">
+            {" "}
+          </span>
+          <div class="flex flex-col gap-2 pb-8">
+            <h5 class="text-2xl font-bold">{card.title}</h5>
+            <p class="text-neutral-400">{card.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

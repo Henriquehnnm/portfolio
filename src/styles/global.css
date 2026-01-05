@@ -1,94 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist:wght@100..900&display=swap");
-@font-face {
-  font-family: "NerdFont";
-  src: url(../assets/fonts/jetbrains-nerd-font.ttf);
-}
+@import "tailwindcss";
 
-* {
-  font-family: "Geist", sans-serif;
-}
+@theme {
+  --default-font-family: Geist;
+  --font-accent: "Bebas Neue";
 
-:root {
-  /* === Backgrounds === */
-  --bg-0: #0b0c0e;
-  --bg-1: #131416;
-  --bg-2: #1b1c1f;
-
-  /* === Foregrounds === */
-  --fg-0: #e8e8ef;
-  --fg-1: #b8b8c4;
-  --fg-2: #8f8f9b;
-
-  /* === Accents === */
-  --accent-blue: #34d8ff;
-  --accent-cyan: #67f1d2;
-  --accent-mint: #9afad2;
-  --accent-purple: #bea5ff;
-  --accent-pink: #ffb2e4;
-  --accent-lime: #d3fa83;
-  --accent-orange: #ffcc91;
-  --accent-red: #ff7b8f;
-  --accent-magenta: #ff7cf3;
-
-  --border-color: rgba(255, 255, 255, 0.07);
-  --shadow-color: rgba(0, 0, 0, 0.45);
-  --dots: #b6b6c265;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    /* === Backgrounds === */
-    --bg-0: #ffffff;
-    --bg-1: #f5f5f5;
-    --bg-2: #e8e8e8;
-    --bg-glass: #ffffff11;
-
-    /* === Foregrounds === */
-    --fg-0: #1a1a1e;
-    --fg-1: #333338;
-    --fg-2: #4d4d55;
-
-    /* === Accents === */
-    --accent-blue: #0086b3;
-    --accent-cyan: #009578;
-    --accent-mint: #00a56f;
-    --accent-purple: #6e50c7;
-    --accent-pink: #bf267f;
-    --accent-lime: #6aa10e;
-    --accent-orange: #b95e05;
-    --accent-red: #b91c1c;
-    --accent-magenta: #9b0fb2;
-
-    --border-color: rgba(0, 0, 0, 0.1);
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --dots: #33333865;
+  @keyframes enter-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes enter-slide-from-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes enter-slide-from-left {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes enter-slide-from-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes exit-fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 }
 
-body {
-  background-color: var(--bg-0);
-  color: var(--fg-0);
+.animate-fade-in,
+.animate-slide-in-from-bottom,
+.animate-slide-in-from-left,
+.animate-slide-in-from-right {
+  opacity: 0;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  inset: 0;
-  background-image: radial-gradient(circle, var(--dots) 1px, transparent 1px);
-  background-size: 30px 30px;
-  opacity: 0.5;
-  z-index: -1;
+.animate-in.animate-fade-in {
+  animation: enter-fade 700ms ease-out forwards;
 }
 
-.nerd {
-  font-family: "NerdFont";
+.animate-in.animate-slide-in-from-bottom {
+  animation: enter-slide-from-bottom 700ms ease-out forwards;
 }
 
-main {
-  flex-grow: 1;
+.animate-in.animate-slide-in-from-left {
+  animation: enter-slide-from-left 700ms ease-out forwards;
+}
+
+.animate-in.animate-slide-in-from-right {
+  animation: enter-slide-from-right 700ms ease-out forwards;
+}
+
+.animate-fade-out {
+  opacity: 1;
+}
+
+.animate-in.animate-fade-out {
+  animation: exit-fade 700ms ease-out forwards;
+}
+
+.animate-in.animate-fade-out {
+  animation: exit-fade 700ms ease-out forwards;
 }
