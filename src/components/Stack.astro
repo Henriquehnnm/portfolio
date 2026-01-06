@@ -3,26 +3,30 @@ const cards = [
   {
     title: "Arquitetura baseada em Astro",
     description:
-      "Foco em entrega de HTML estático e hidratação seletiva para performance real.",
+      "Foco em velocidade máxima de carregamento, entregando sites leves que melhoram a experiência do usuário e o ranking no Google.",
   },
   {
     title: "Estilização com Tailwind",
-    description: "Interfaces responsivas e leves, sem excesso de arquivos CSS.",
+    description:
+      "Criação de interfaces modernas e responsivas de forma otimizada, eliminando códigos desnecessários e acelerando a abertura das páginas.",
   },
   {
     title: "Segurança com TypeScript",
     description:
-      "Desenvolvimento com tipagem estrita para evitar erros comuns em produção.",
+      "Uso de verificações inteligentes para identificar e prevenir erros antes mesmo do site ir ao ar, garantindo estabilidade e menos manutenção.",
   },
   {
     title: "Workflow Eficiente",
     description:
-      "Processo de desenvolvimento ágil, focado em clareza e organização de código.",
+      "Processo de desenvolvimento organizado e ágil, focado em entregar um código limpo que facilita futuras atualizações e o crescimento do projeto.",
   },
 ];
 ---
 
-<section id="sobre" class="p-5 lg:p-24 flex flex-col gap-5">
+<section
+  id="sobre"
+  class="p-5 lg:p-24 flex flex-col gap-5 animate-slide-in-from-left"
+>
   <span class="uppercase text-neutral-400">➜ Diferenciais</span>
   <h3 class="text-4xl/10 md:text-5xl/20 font-extrabold">
     Cards informativos, <br /> sem exagero
@@ -37,7 +41,7 @@ const cards = [
     {
       cards.map((card, index) => (
         <div
-          class="flex gap-5 animate-fade-in"
+          class="flex gap-5 animate-slide-in-from-bottom"
           style={`animation-delay: ${index * 100}ms`}
         >
           <span class="w-1 h-full bg-linear-to-b/shorter from-indigo-500 via-violet-500 to-purple-500 block">
